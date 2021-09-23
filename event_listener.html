@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+    <style>
+        button{
+            background-color: blueviolet;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="myList">
+            <li  class="item">
+                <button class="btn-class" >ClickToChange</button>
+                <p id="first-para">Hi Whats up ?</p>
+            </li>
+            <li class="item">
+                <button class="btn-class">ClickToChange</button>
+                <p>second paragraph</p>
+            
+            </li>
+            <li class="item"><button class="btn-class">ClickToChange</button>
+                <p>third paragraph</p></li>
+            <li class="item"><button class="btn-class">ClickToChange</button>
+                <p>fourth paragraph</p></li>
+        </ul>
+    </div>
+    <script>
+        let btn=document.getElementsByClassName('btn-class');
+        let para=document.getElementById('first-para');
+        for (let i = 0; i < btn.length; i++) {
+            let element = btn[i];
+            element.addEventListener('click',function(event){
+                para.innerHTML='Changed Man !';
+          
+            
+            })
+            
+        }
+        
+
+    </script>
+    
+</body>
+</html>
